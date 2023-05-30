@@ -1,7 +1,9 @@
+import Navbar from './Components/Navbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { IBM_Plex_Mono } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
+const ibm = IBM_Plex_Mono({ subsets: ['latin'], weight: '400' })
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={ibm.className}>
+        <Navbar/>
+        {children}
+        </body>
     </html>
   )
 }
